@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>Gunhilds Webbutik</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+
+    <script src="app/root/root-page.module.js"></script>
+    <script src="app/root/root-page.component.js"></script>
+    <script src="app/root/root-page.controller.js"></script>
+
+    <script src="app/bar/bar.module.js"></script>
+    <script src="app/bar/bar.component.js"></script>
+    <script src="app/bar/bar.controller.js"></script>
+
+    <script src="app/filter/filter.module.js"></script>
+    <script src="app/filter/filter.js"></script>
+
+    <script src="app/product/product.module.js"></script>
+    <script src="app/product/product.component.js"></script>
+    <script src="app/product/product.service.js"></script>
+    <script src="app/product/product-list.controller.js"></script>
+    <script src="app/product/product-details.controller.js"></script>
+
+    <script src="app/category/category.module.js"></script>
+    <script src="app/category/category.service.js"></script>
+
+    <script src="app/cart/shopping-cart.module.js"></script>
+    <script src="app/cart/shopping-cart.component.js"></script>
+    <script src="app/cart/shopping-cart.service.js"></script>
+    <script src="app/cart/shopping-cart.controller.js"></script>
+
+    <script src="app/login/login.module.js"></script>
+    <script src="app/login/login.component.js"></script>
+    <script src="app/login/login.service.js"></script>
+    <script src="app/login/login.controller.js"></script>
+
+    <script src="app/signup/signup.module.js"></script>
+    <script src="app/signup/signup.component.js"></script>
+    <script src="app/signup/signup.service.js"></script>
+    <script src="app/signup/signup.controller.js"></script>
+
+    <script src="app/checkout/checkout.module.js"></script>
+    <script src="app/checkout/checkout.component.js"></script>
+    <script src="app/checkout/checkout.service.js"></script>
+    <script src="app/checkout/checkout.controller.js"></script>
+
+    <script src="app/error/error.module.js"></script>
+    <script src="app/error/error.component.js"></script>
+    <script src="app/error/error.controller.js"></script>
+</head>
+<body ng-app="app">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <header-bar></header-bar>
+        </div>
+    </div>
+    <div class="row" ng-view>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <footer-bar></footer-bar>
+        </div>
+    </div>
+</div>
+</body>
+</html>

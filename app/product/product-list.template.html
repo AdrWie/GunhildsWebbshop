@@ -1,0 +1,21 @@
+<div class="col-md-12">
+    <ul class="flex-container">
+        <li class="flex-item" ng-repeat="product in products | filterProducts:searchedProduct | filterCategory:searchedCategory">
+            <table>
+                <tr>
+                    <td colspan="1"><a href="/product/{{ product.id }}"><img ng-src="{{ product.imageUrl }}"></a></td>
+                </tr>
+                <tr>
+                    <td colspan="1"><a href="/product/{{ product.id }}">{{ product.name }}</a></td>
+                </tr>
+                <tr>
+                    <td><span class="badge">{{ product.price }} kr</span><span ng-if="product.unitsInStock == 0" class="label label-danger">Slut</span></td>
+                </tr>
+                <tr>
+                    <td ng-hide="product.unitsInStock == 0"><a id="star-success" ng-click="addItemToCart(product, 1)" type="button" class="btn btn-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></a></td>
+                    <td ng-show="product.unitsInStock == 0"><a id="star-default" type="button" class="btn btn-default" disabled="disabled"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></a></td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+</div>

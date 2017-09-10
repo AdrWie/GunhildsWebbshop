@@ -1,0 +1,48 @@
+<div class="col-md-4">
+    <form name="customerForm" novalidate>
+        <div class="form-group" ng-class="{'has-error': customerForm.firstName.$invalid && customerForm.firstName.$touched, 'has-success': customerForm.firstName.$valid }">
+            <label for="firstName">Förnamn </label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Förnamn" ng-model="customer.firstName"required>
+            <span class="label label-danger" ng-if="customerForm.firstName.$invalid && customerForm.firstName.$touched">Förnamn saknas!</span>
+        </div>
+        <div class="form-group" ng-class="{'has-error': customerForm.lastName.$invalid && customerForm.lastName.$touched, 'has-success': customerForm.lastName.$valid }">
+            <label for="lastName">Efternamn </label>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Efternamn" ng-model="customer.lastName"required>
+            <span class="label label-danger" ng-if="customerForm.lastName.$invalid && customerForm.lastName.$touched">Efternamn saknas!</span>
+        </div>
+        <div class="form-group" ng-class="{'has-error': customerForm.email.$invalid && customerForm.email.$touched, 'has-success': customerForm.email.$valid }">
+            <label for="email">E-post </label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-post" ng-model="customer.email" required>
+            <span class="label label-danger" ng-if="customerForm.email.$invalid && customerForm.email.$touched">E-post saknas!</span>
+        </div>
+        <div class="form-group" ng-class="{'has-error': customerForm.phone.$invalid && customerForm.phone.$touched, 'has-success': customerForm.phone.$valid }">
+            <label for="phone">Telefon </label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefonnummer" ng-model="customer.phone" required>
+            <span class="label label-danger" ng-if="customerForm.phone.$invalid && customerForm.phone.$touched">Telefonnummer saknas!</span>
+        </div>
+        <div class="form-group" ng-class="{'has-error': customerForm.password.$invalid && customerForm.password.$touched && customerForm.password.$touched, 'has-success': customerForm.password.$valid }">
+            <label for="password">Lösenord </label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Lösenord" ng-model="customer.password"required>
+            <span class="label label-danger" ng-if="customerForm.password.$invalid && customerForm.password.$touched">Lösenord saknas!</span>
+        </div>
+        <div class="form-group" ng-class="{'has-error': customerForm.address.$invalid && customerForm.address.$touched, 'has-success': customerForm.address.$valid }">
+            <label for="address">Adress </label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="Adress" ng-model="customer.address" required>
+            <span class="label label-danger" ng-if="customerForm.address.$invalid && customerForm.address.$touched">Adress saknas!</span>
+        </div>
+        <div class="form-group" ng-class="{'has-error': customerForm.postalCode.$invalid && customerForm.postalCode.$touched, 'has-success': customerForm.postalCode.$valid }">
+            <label for="postalCode">Postnummer </label>
+            <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="Postnummer" ng-model="customer.postalCode"
+                required>
+            <span class="label label-danger" ng-if="customerForm.postalCode.$invalid && customerForm.postalCode.$touched">Postnummer saknas!</span>
+        </div>
+        <div class="form-group" ng-class="{'has-error': customerForm.city.$invalid && customerForm.city.$touched, 'has-success': customerForm.city.$valid }">
+            <label for="city">Ort </label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Ort" ng-model="customer.city" required>
+            <span class="label label-danger" ng-if="customerForm.city.$invalid && customerForm.city.$touched">Ort saknas!</span>
+        </div>
+        <div class="alert alert-danger" role="alert" ng-hide="failMessage">Fel vid registrering</div>
+        <button ng-disabled="customerForm.$invalid || !failMessage" type="submit" class="btn btn-default" ng-click="signup()">Registrera</button>        
+        <button type="submit" class="btn btn-default" ng-click="back()">Tillbaka</button>
+    </form>
+</div>

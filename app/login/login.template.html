@@ -1,0 +1,22 @@
+<div class="col-md-4">
+    <form name="userLoginForm" novalidate>
+        <div class="form-group" ng-class="{'has-error': userLoginForm.email.$invalid && userLoginFor.email.$touched}">
+            <label for="email">E-post</label>
+            <input type="email" class="form-control" ng-model="email" placeholder="E-post" name="email" id="email" required> 
+        </div>
+        <div class="form-group" ng-class="{'has-error': userLoginForm.password.$invalid && userLoginForm.password.$touched}">
+            <label for="password">Lösenord</label>
+            <input type="password" class="form-control" ng-model="password" placeholder="Lösenord" name="password" id="password" required>
+        </div>
+        <div class="alert alert-danger" role="alert" ng-hide="failMessage">
+            Felaktig användarnamn eller lösenord
+        </div>
+        <div class="alert alert-info" role="alert" ng-hide="loginMessage">
+            Logga in för att visa denna sida.
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="login()" ng-disabled="loginClicked || userLoginForm.$invalid">
+            Logga in
+        </button> 
+        <a href="/signup" class="btn btn-default">Skapa konto</a>
+    </form>
+</div>

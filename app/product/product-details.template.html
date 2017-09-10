@@ -1,0 +1,26 @@
+
+<div class="col-md-6 .col-md-offset-3">
+    <div class="panel-group">
+        <div class="panel panel-warning">
+            <h2>{{ product.name}}</h2>
+        </div>
+    </div>
+    <div class="panel panel-warning">
+        <div class="col-md-3">
+            <img ng-src="{{ product.imageUrl}}">
+            <i>{{ product.description }}</i>
+            <h3 class="price-tag"><i>{{ product.price }} Kr</i></h3>
+            <i><span class="label label-danger" ng-if="product.unitsInStock == 0">För tillfället slut</span></i>
+            <div ng-hide="product.unitsInStock == 0">
+                <i>Antal produkter: </i>
+                <a href="#" ng-click="removeProduct()"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a>{{quantity }}
+                <a href="#" ng-click="addProduct()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a><br><br>
+                <div class="absolute">
+                    <a ng-click="addItemToCart(product, quantity)" type="button" class="btn btn-info">Lägg i kundvagn</a>
+                    <a href="/checkout" type="button" class="btn btn-success">Till kassan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

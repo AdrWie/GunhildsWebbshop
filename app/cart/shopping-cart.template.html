@@ -1,0 +1,26 @@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr class="active">
+            <th>Antal</th>
+            <th>Produkt</th>
+            <th class="cartprice">Pris</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="product in cartProducts" class="active">
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.product.name }}</td>
+            <td class="cart-total">{{ (product.product.price * product.quantity) }} kr</td>
+            <td><a href="#" ng-click="removeCartItem($index)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></a></td>
+        </tr>
+    </tbody>
+    <thead>
+    <tr class="active">
+        <th></th>
+        <th class="cartprice">Totalpris:</th>
+        <th class="cartprice">{{ cartTotalPrice }} kr</th>
+        <th></th>
+    </tr>
+    </thead>
+</table>

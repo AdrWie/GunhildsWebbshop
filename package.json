@@ -1,0 +1,23 @@
+{
+  "name": "gunhildswebshop",
+  "version": "1.0.0",
+  "description": "struktur över projektet",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrWie/GunhildsWebshop.git"
+  },
+  "author": "Adrian Wieslander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrWie/GunhildsWebshop/issues"
+  },
+  "homepage": "https://github.com/AdrWie/GunhildsWebshop#readme",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

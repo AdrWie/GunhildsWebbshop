@@ -1,0 +1,16 @@
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Varor i din kundvagn</h3>
+        </div>
+        <shopping-cart></shopping-cart>
+
+    </div>
+
+    <div class="alert alert-danger" role="alert" ng-show="orderError">Ordern kunde inte registreas, försök igen.</div>
+
+    <div class="checkout-button">
+        <button ng-disabled="checkoutClicked || emptyCart" type="button" class="btn btn-success" ng-click="checkout()">
+            <span aria-hidden="true" ng-hide="checkoutClicked"></span>Beställ</button>
+    </div>
+</div>
